@@ -8,8 +8,6 @@ device, and POSTs a webhook when something goes down.
   <img src="docs/web-ui.png" alt="Web UI with dummy monitors" width="900">
 </p>
 
-<p align="center"><em>The web UI, shown with dummy monitors.</em></p>
-
 ## What it does
 
 - **HTTP(S) monitor** — `GET` a URL; configurable accepted status codes,
