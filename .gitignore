@@ -1,0 +1,13 @@
+.pio/
+.pioenvs/
+.vscode/
+.venv/
+
+# Local device config and flash backups: never commit these.
+data/config.json
+backups/
+
+*.bin
+*.elf
+*.map
+.DS_Store

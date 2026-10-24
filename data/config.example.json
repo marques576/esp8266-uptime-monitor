@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "device_name": "uptime-monitor",
+  "wifi": { "ssid": "", "pass": "" },
+  "webhook": {
+    "url": "",
+    "token": "",
+    "format": "generic",
+    "notify_on_recovery": true
+  },
+  "ui": { "user": "", "pass": "" },
+  "timeout_ms": 5000,
+  "monitors": [
+    {
+      "id": 1,
+      "name": "web",
+      "type": "http",
+      "url": "https://example.com/health",
+      "interval": 60,
+      "retries": 3,
+      "retry_interval": 60,
+      "resend_every": 0,
+      "timeout_ms": 0,
+      "accepted_status": "200-299",
+      "max_redirects": 5,
+      "keyword": "",
+      "upside_down": false,
+      "notify": true,
+      "enabled": true,
+      "description": "HTTP health endpoint"
+    },
+    {
+      "id": 2,
+      "name": "app",
+      "type": "tcp",
+      "host": "192.0.2.10",
+      "port": 22,
+      "interval": 60,
+      "retries": 3,
+      "retry_interval": 60,
+      "resend_every": 0,
+      "upside_down": false,
+      "notify": true,
+      "enabled": true,
+      "description": "TCP port check"
+    },
+    {
+      "id": 3,
+      "name": "router",
+      "type": "ping",
+      "host": "192.0.2.1",
+      "interval": 60,
+      "retries": 3,
+      "retry_interval": 60,
+      "resend_every": 0,
+      "upside_down": false,
+      "notify": true,
+      "enabled": true,
+      "description": "ICMP reachability"
+    }
+  ]
+}
